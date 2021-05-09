@@ -1,5 +1,6 @@
 const hamburgerButton = document.querySelector('#map')
 
+// For nav hamburger functionality
 $(document).ready(function () {
     $('.nav-hamburger').click(function () {
         if ($('.menu-content').css('display') == 'none') {
@@ -24,9 +25,23 @@ $(document).ready(function () {
             $('#map').css('display', 'none')
         }
     })
+
+    // contact me tab opening
+    $('#h2Contact').click(function () {
+        if ($('#emailForm').css('display') == 'none') {
+            $('#emailForm').css('display', 'block');
+        }
+        else {
+            $('#emailForm').css('display', 'none');
+        }
+    })
+
+    if ($('.error').length) {
+        $('#emailForm').css('display', 'block');
+    }
 });
 
-// need to rewrite in vanilla js
+// Changes colors for separate pages in nav menu.
 if ($('div#index').length) {
     $('li.index').addClass('current')
 }

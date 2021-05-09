@@ -8,8 +8,24 @@
     <main id="contact">
         <div style="display: none" id="contactme"></div>
         <div class="contact-info extra">
-            <h2>Email Address </br> <span class="current not-bold">nedas.snarskis17@gmail.com</span></h2>
-            
+            <h2 id="h2Contact">Contact me</br></h2>
+            {% if message_type == 'success' %}
+                <p class=" message success"> {{ message }} </p>
+            {% elif message_type == 'error' %}
+                <p class="message error"> {{ message }} </p>
+            {% endif %}
+            <form action='' method="post" id="emailForm">
+                <fieldset>
+                    <legend> Connect with me </legend>
+                    <input type="text" name="name" placeholder="Your name"> </input>
+                    <br>
+                    <input type="text" name="email" placeholder="Your email address"> </input>
+                    <br>
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <br>
+                    <input class="button" type="submit" value="Send email">
+                </fieldset>
+            </form>
         </div>
         <br>
         <div class="contact-info location">

@@ -91,6 +91,70 @@ main#contact{
     width:80%;
     margin:auto;
     max-width: 800px;
+    p.message{
+        text-align: center;
+        padding: 10px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    p.success{
+        background-color: rgba(26, 143, 26, 0.6);
+    }
+    p.error{
+        background-color: red;
+    }
+
+    div.extra{
+        form{
+            display: none;
+            fieldset{
+                background-color: rgb(69, 68, 68);
+                margin: 1rem auto 1rem auto;
+                border: 2px solid rgb(186, 186, 186);
+                border-radius: 5px;
+                padding: 15px;
+                text-align: center;
+                width: 80%;
+                max-width: 600px;
+                input, textarea{
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 1rem;
+                }
+                input{
+                    border-radius: 50px;
+                    &:focus{
+                        box-shadow: 0px 5px 5px solid dodgerblue;
+                        outline: none;
+                        border: 2px solid dodgerblue
+                    }
+                }
+                textarea{
+                    border-radius: 5px;
+                    height: 100px;
+                    &:focus{
+                        outline: none;
+                        border: 2px solid dodgerblue;
+                        box-shadow: 0px 5px 5px solid dodgerblue;
+                    }
+                }
+                
+                input[type="submit"]{
+                    max-width: 250px;
+                    border: 2px solid grey;
+                    &:hover{
+                        background-color: dodgerblue;
+                        cursor: pointer;
+                        border: 2px solid white;
+                        color: white;
+                    }
+                    border-radius: 5px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
     div.contact-info{
         position: relative;
         z-index: 1;
@@ -117,6 +181,7 @@ main#contact{
         }
 
         div.map{
+            margin-top: 1rem;
             display:none;
             position: relative;
             z-index:0;
