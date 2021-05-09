@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Contact Me</title>
+{% endblock head %}
+
+{% block content %}
+    <main id="contact">
+        <div style="display: none" id="contactme"></div>
+        <div class="contact-info extra">
+            <h2>Email Address </br> <span class="current not-bold">nedas.snarskis17@gmail.com</span></h2>
+            
+        </div>
+        <br>
+        <div class="contact-info location">
+            <i class="fas fa-map-marked-alt map-icon"></i>
+            <div class="text">
+                <h2>Location </br> <span class="current not-bold">Los Angeles, CA</span></h2>
+            </div>
+
+            <div class="map" id="map">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="500" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=los%20angeles&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock content %}

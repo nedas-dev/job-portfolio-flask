@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Job Portfolio Website">
+    <meta name="keywords" content="Portfolio Programmer nedas-dev nedas.dev nedas dev">
+    <meta name="author" content="Nedas Snarskis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <script src="https://kit.fontawesome.com/7c0fbdbb67.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta itemprop="author" content="nedas snarskis">
+    <meta itemprop="publisher" content="nedas snarskis">
+    <meta itemprop="datePublished" content="October 3, 2020">
+    <meta itemprop="dateModified" content="April 13, 2021">
+    <meta property="og:url" content="https://www.nedas.dev/">
+    <meta property="og:site_name" content="nedasdev">
+    {% block head %} {% endblock head %}
+</head>
+
+<body class="bg-image">
+    <div class="blur"></div>
+    <header id="main-menu">
+        <div class="menu-btn">
+            <div class="nav-hamburger">
+                <div class="lines line1"></div>
+                <div class="lines line2"></div>
+                <div class="lines line3"></div>
+            </div>
+
+            <div class="layout-2"></div>
+
+            <div class="menu-content">
+                <ul class="nav-list">
+                    <a href="/">
+                        <li class="nav-item index">Home</li>
+                    </a>
+                    <a href="/portfolio/">
+                        <li class="nav-item projects">My Projects</li>
+                    </a> <a href="/aboutme/">
+                        <li class="nav-item aboutme">About Me</li>
+                    </a> <a href="/contact/">
+                        <li class="nav-item contactme">Contact Me</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock content %}
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+</body>
+
+</html>

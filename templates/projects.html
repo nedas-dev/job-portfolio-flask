@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>My Projects</title>
+{% endblock head %}
+
+{% block content %}
+    <main id="projects">
+        <div style="display: none" id="projects"></div>
+        <div class="wrapper">
+            <div class="project-item">
+                <a target="_blank" href="https://nedas-dev.github.io/sorting-visualizer/"><img
+                        src="{{ url_for('static', filename='images/project/image6.png')}}" alt="project image"></a>
+                <div class="description">
+                    <h4>Sort Visualizer</h4>
+                    <p>JS + HTML + SCSS</p>
+                    <div class="buttons">
+                        <a href="https://github.com/nedas-dev/sorting-visualizer"><i class="fab fa-github 2x"></i></a>
+                        <a href="https://nedas-dev.github.io/sorting-visualizer/" class="grey"><i
+                                class="far fa-eye 2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <a target="_blank" href="https://nedas-dev.github.io/WikiAPI-with-Fetch/"><img
+                        src="{{ url_for('static', filename='images/project/image7.png') }}" alt="project image"></a>
+                <div class="description">
+                    <h4>WIKI API Search Engine</h4>
+                    <p>JS + HTML + SCSS<br>Powered with WikiAPI</p>
+                    <div class="buttons">
+                        <a href="https://github.com/nedas-dev/WikiAPI-with-Fetch"><i class="fab fa-github 2x"></i></a>
+                        <a href="https://nedas-dev.github.io/WikiAPI-with-Fetch/" class="grey"><i
+                                class="far fa-eye 2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <a target="_blank" href="https://nedas-dev.github.io/rsvp-app/"><img src="{{ url_for('static', filename='images/project/image3.jpg') }}" alt="project image"></a>
+                <div class="description">
+                    <h4>RSVP app</h4>
+                    <p>HTML + SCSS + JS <br>Min Responsiveness</p>
+                    <div class="buttons">
+                        <a href="https://github.com/nedas-dev/rsvp-app"><i class="fab fa-github 2x"></i></a>
+                        <a href="https://nedas-dev.github.io/rsvp-app/" class="grey"><i class="far fa-eye 2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <a target="_blank" href="https://www.nedas.dev"><img src="{{ url_for('static', filename='images/project/image1.jpg') }}"
+                        alt="project image"></a>
+                <div class="description">
+                    <h4>Job Portfolio Project</h4>
+                    <p>HTML + SCSS </br>Responsive</nr>
+                    </p>
+                    <div class="buttons">
+                        <a href="https://github.com/nedas-dev/job-portfolio"><i class="fab fa-github 2x"></i></a>
+                        <a href="https://www.nedas.dev" class="grey"><i class="far fa-eye 2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <a target="_blank" href="https://nedas-dev.github.io/cvs-homepage-clone/"><img
+                        src="{{ url_for('static', filename='images/project/image2.jpg') }}"alt="project image"></a>
+                <div class="description">
+                    <h4>CVS homepage clone</h4>
+                    <p>HTML + SCSS <br>Responsive</p>
+                    <div class="buttons">
+                        <a href="https://github.com/nedas-dev/cvs-homepage-clone"><i class="fab fa-github 2x"></i></a>
+                        <a href="https://nedas-dev.github.io/cvs-homepage-clone/" class="grey"><i
+                                class="far fa-eye 2x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item">
+                <a target="_blank" href="https://nedas-dev.github.io/local-storage-project/"><img
+                        src="{{ url_for('static', filename='images/project/image5.png') }}"
+                        alt="project image"></a>
+                <div class="description">
+                    <h4>Search history saver</h4>
+                    <p>HTML + SCSS + JS</br>Local Storage implementation</nr>
+                    </p>
+                    <div class="buttons">
+                        <a href="https://github.com/nedas-dev/local-storage-project"><i
+                                class="fab fa-github 2x"></i></a>
+                        <a href="https://nedas-dev.github.io/local-storage-project/" class="grey"><i
+                                class="far fa-eye 2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+{% endblock content %}

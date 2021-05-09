@@ -1,0 +1,44 @@
+$primary-color: rgb(109, 104, 117);
+$primary-color: rgb(59, 58, 58);
+$secondary-color: #457b9d;
+$third-color: #a8dadc;
+$bg-image: url('../images/bg5.jpg');
+
+@mixin Sm-devices{
+    @media screen and (max-width:500px){
+        @content;
+    }
+}
+
+@mixin Md-devices{
+    @media screen and (min-width:501px) and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin Lg-devices{
+    @media screen and (min-width:769px) and(max-width: 1170px){
+        @content;
+    }
+}
+
+@mixin Xl-devices{
+    @media screen and (min-width: 1171px){
+        @content;
+    }
+}
+
+@mixin transition($value){
+    transition: $value;
+    -moz-transition: $value;
+    -webkit-transition: $value;
+    -o-transition: $value;
+}
+
+@mixin transform($value){
+    transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -webkit-transform: $value;
+    -o-transform: $value;
+}

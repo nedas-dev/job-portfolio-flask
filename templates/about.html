@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+    <title>About Me</title>
+{% endblock head%}
+
+{% block content %}
+    <main id="about">
+        <div style="display: none" id="aboutme"></div>
+        <div class="wrapper">
+            <div class="image-container">
+                <div class="image"></div>
+            </div>
+            <div class="about-me">
+                <h3>About Me</h3>
+                <p>Nedas Snarskis is a full stack developer with a passion for bringing clients’ dream websites to life.
+                    From e-commerce to regular business sites, Nedas can assist clients throughout the web development
+                    process. Nedas is dedicated to bringing immense value to every client through his development skills
+                    and commitment to excellence. Looking for a new web developer to add to your team? Please don’t
+                    hesitate to reach out through the “Contact Me” tab. I look forward to connecting!</p>
+            </div>
+        </div>
+        <fieldset>
+            <legend>
+                <div class="tehno">
+                    <h1>Experience with . . .</h1>
+                </div>
+            </legend>
+
+            <div class="icons">
+                <div class="item7 icon" style="color:rgb(241,219,79)"><i class="fab fa-js-square"></i></div>
+                <div class="item1 icon svg"><img src="{{ url_for('static', filename='images/icons/python.svg')}}" alt="python"></i> </div>
+                <div class="item2 icon svg"><img src="{{ url_for('static', filename='images/icons/django.svg')}}" alt="django"> </div>
+                <div class="item3 icon" style="color:rgb(229,78,23);"><i class="fab fa-html5 "></i> </div>
+                <div class="item4 icon" style="color:rgb(209,98,155);"><i class="fab fa-sass "></i> </div>
+                <div class="item5 icon" style="color:rgb(0, 119,182)"><i class="fab fa-css3-alt "></i> </div>
+                <div class="item6 icon" style="color:rgb(50,50,50)"><i class="fas fa-code-branch"></i></div>
+            </div>
+
+        </fieldset>
+
+        <div class="random"></div>
+
+    </main>
+{% endblock content %}
