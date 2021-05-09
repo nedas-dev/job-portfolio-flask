@@ -8,7 +8,9 @@
     <main id="contact">
         <div style="display: none" id="contactme"></div>
         <div class="contact-info extra">
-            <h2 id="h2Contact">Contact me</br></h2>
+            <div class="text">
+                <h2 id="h2Contact">Contact me</br></h2>
+            </div>
             {% if message_type == 'success' %}
                 <p class=" message success"> {{ message }} </p>
             {% elif message_type == 'error' %}
