@@ -154,6 +154,7 @@ main#contact {
   width: 80%;
   margin: auto;
   max-width: 800px;
+  padding-bottom: 3rem;
 }
 main#contact p.message {
   text-align: center;
