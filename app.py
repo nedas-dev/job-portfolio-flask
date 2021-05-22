@@ -1,7 +1,9 @@
 from flask import Flask, render_template, url_for, request
 from flask_mail import Mail, Message
+from flask_sqlalchemy import SQLAlchemy
 import os
 
+basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
@@ -11,12 +13,30 @@ app.config['MAIL_PASSWORD'] = os.environ['EMAIL_PASS']
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_DEFAULT_SENDER'] = os.environ['EMAIL_USER']
-
 mail = Mail(app)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv['DATABASE_URL']
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+
+class Visit(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    count = db.Column(db.Integer, nullable=False, default=1)
+
+    def __repr__(self):
+        return f'{self.id} - total count: {self.count}'
 
 
 @app.route('/')
 def index():
+    try:
+        counter = Visit.query.filter_by(id=1).first_or_404()
+        counter.count += 1
+        db.session.commit()
+    except:
+        print('did not work')
+
     return render_template('index.html')
 
 
@@ -50,5 +70,11 @@ def contact():
     return render_template('contact.html')
 
 
+# @app.route('/visits')
+# def visits():
+#     inst = Visit.query.get_or_404(id=1)
+#     return f'Total visits: {inst.count}'
+
+
 if __name__ == '__main__':
-    app.run(threaded=True, port=5000)
+    app.run(debug=True)
