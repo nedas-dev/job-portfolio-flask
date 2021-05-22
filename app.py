@@ -72,7 +72,7 @@ def contact():
 
 @app.route('/visits')
 def visits():
-    inst = Visit.query.get_or_404(id=1)
+    inst = Visit.query.filter_by(id=1).first_or_404()
     return f'Total visits: {inst.count}'
 
 
