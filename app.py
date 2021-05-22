@@ -34,11 +34,6 @@ def index():
         counter = Visit.query.filter_by(id=1).first_or_404()
         counter.count += 1
         db.session.commit()
-
-        msg = Message('VISITORS', recipients=[
-            'nedas.snarskis17@gmail.com'])
-        msg.body = f'Somebody just visited you!'
-        mail.send(msg)
     except:
         pass
 
