@@ -70,7 +70,7 @@ def contact():
     return render_template('contact.html')
 
 
-@app.route('/visits')
+@app.route('/visits/')
 def visits():
     inst = Visit.query.filter_by(id=1).first_or_404()
     return f'Total visits: {inst.count}'
