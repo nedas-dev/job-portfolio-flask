@@ -35,7 +35,7 @@ def index():
         counter.count += 1
         db.session.commit()
     except:
-        print('did not work')
+        pass
 
     return render_template('index.html')
 
