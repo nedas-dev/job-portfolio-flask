@@ -70,11 +70,11 @@ def contact():
     return render_template('contact.html')
 
 
-# @app.route('/visits')
-# def visits():
-#     inst = Visit.query.get_or_404(id=1)
-#     return f'Total visits: {inst.count}'
+@app.route('/visits')
+def visits():
+    inst = Visit.query.get_or_404(id=1)
+    return f'Total visits: {inst.count}'
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
