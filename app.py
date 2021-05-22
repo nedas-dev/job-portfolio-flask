@@ -15,7 +15,7 @@ app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_DEFAULT_SENDER'] = os.environ['EMAIL_USER']
 mail = Mail(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
