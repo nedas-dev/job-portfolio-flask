@@ -295,7 +295,7 @@ main#about{
         margin: 20px auto;
         padding: 30px 15px;
         width:90%;
-        max-width: 1200px;
+        max-width: 850px;
         background-color: lighten($primary-color, 10);
 
         div.icons{
@@ -303,8 +303,7 @@ main#about{
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-around;
-            div.icon{
-                
+            div.icon{ 
                 img{
                     height: 80px;
                     width: 80px;
