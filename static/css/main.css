@@ -350,14 +350,10 @@ main#about fieldset div.icons {
   flex-direction: row;
   justify-content: space-around;
 }
-main#about fieldset div.icons div.icon img {
-  height: 80px;
-  width: 80px;
-  margin: 10px 20px;
-}
-main#about fieldset div.icons div.icon i {
-  font-size: 80px;
-  margin: 10px 20px;
+main#about fieldset div.icons img {
+  width: 90px;
+  height: auto;
+  padding: 15px;
 }
 main#about fieldset legend {
   margin: auto;
@@ -545,9 +541,6 @@ main#projects div.wrapper div.project-item:hover {
   }
   main#about div.wrapper div.about-me p {
     font-size: 1rem;
-  }
-  main#about fieldset legend div.tehno h1 {
-    font-size: 16px;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {

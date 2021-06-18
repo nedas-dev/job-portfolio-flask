@@ -303,18 +303,10 @@ main#about{
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-around;
-            div.icon{
-                
-                img{
-                    height: 80px;
-                    width: 80px;
-                    margin: 10px 20px;
-                }
-
-                i{
-                    font-size: 80px;
-                    margin: 10px 20px;
-                }
+            img{
+                width: 90px;
+                height: auto;
+                padding: 15px;
             }
         }
 
