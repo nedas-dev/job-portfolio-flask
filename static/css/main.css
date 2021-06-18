@@ -338,10 +338,10 @@ main#about div.wrapper div.about-me p {
   line-height: 1.6rem;
 }
 main#about fieldset {
+  max-width: 900px;
   margin: 20px auto;
   padding: 30px 15px;
   width: 90%;
-  max-width: 1200px;
   background-color: #555353;
 }
 main#about fieldset div.icons {
