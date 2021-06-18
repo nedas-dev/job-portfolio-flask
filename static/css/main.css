@@ -341,7 +341,7 @@ main#about fieldset {
   margin: 20px auto;
   padding: 30px 15px;
   width: 90%;
-  max-width: 850px;
+  max-width: 1200px;
   background-color: #555353;
 }
 main#about fieldset div.icons {
@@ -505,8 +505,50 @@ main#projects div.wrapper div.project-item:hover {
     font-size: 0.9rem;
   }
 
+  main#projects {
+    margin: 100px auto;
+    width: 100%;
+  }
   main#projects div.wrapper {
-    grid-template-columns: 1fr;
+    margin: 0px 20px;
+    display: flex;
+    grid-gap: 20px;
+    justify-content: space-evenly;
+    justify-items: center;
+    flex-wrap: wrap;
+  }
+  main#projects div.wrapper div.project-item {
+    padding: 10px;
+    border: 2px solid #a8dadc;
+    border-radius: 5px;
+    background: #6c6c68;
+  }
+  main#projects div.wrapper div.project-item img {
+    width: 140px;
+    height: 125px;
+    border-bottom: 3px solid #a8dadc;
+  }
+  main#projects div.wrapper div.project-item div.description {
+    padding: 5px;
+    text-align: center;
+  }
+  main#projects div.wrapper div.project-item div.description div.buttons {
+    padding: 7px;
+  }
+  main#projects div.wrapper div.project-item div.description div.buttons a {
+    text-decoration: none;
+    color: #a8dadc;
+    font-size: 1rem;
+  }
+  main#projects div.wrapper div.project-item div.description div.buttons .grey {
+    color: #fff;
+    margin-left: 35px;
+  }
+  main#projects div.wrapper div.project-item div.description p {
+    font-size: 0.6rem;
+  }
+  main#projects div.wrapper div.project-item:hover {
+    background: #3b3a3a;
   }
 }
 @media screen and (min-width: 501px) and (max-width: 768px) {
