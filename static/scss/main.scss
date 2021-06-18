@@ -343,22 +343,20 @@ main#about{
 // My Projects Page
 main#projects{
     margin:100px auto;
-    max-width:1200px;
+    max-width:1400px;
 
     div.wrapper{
         margin: 0px 50px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 50px;
+        display: flex;
         justify-content: space-evenly;
-        justify-items: center;
-        
+        flex-wrap: wrap;
         div.project-item{
             padding:10px;
             border: 2px solid $third-color;
             border-radius: 5px;
             background: rgb(108, 108, 104);
-
+            margin-bottom: 3rem;
+            margin: 0rem 1rem 3rem 1rem;
             img{
                 width:220px;
                 height: 195px;
