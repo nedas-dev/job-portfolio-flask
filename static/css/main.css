@@ -72,6 +72,7 @@ header#main-menu div.menu-content ul.nav-list li.nav-item:hover {
 }
 
 #mainfooter {
+  margin-top: 1.5rem;
   background-color: #545454;
   width: 100%;
 }
@@ -342,7 +343,7 @@ main#about {
 main#about div.wrapper {
   margin: 100px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 @media screen and (max-width: 1020px) {
