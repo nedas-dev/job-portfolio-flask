@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=”en” prefix=”og: http://ogp.me/ns#">
+<html lang=”en” prefix=”og: http://ogp.me/ns#”>
 
 <head>
     <meta property='og:title' content='Welcome to my portfolio' />
@@ -54,6 +54,22 @@
 
     {% block content %}
     {% endblock content %}
+    <footer id="mainfooter" class="">
+        <div class="footer-wrap">
+            <a target="_blank" href="https://www.nedas.dev">
+                <img src="{{ url_for('static', filename='images/icons/nedas1.png')}}" />
+            </a>
+            <p>Copyright &copy; 2021</p>
+            <div class="social-media">
+                <a target="_blank" href="https://github.com/nedas-dev">
+                    <i class="fab fa-github fa-3x"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/nedas-snarskis-b54175196/">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="{{ url_for('static', filename='js/main.js')}}"></script>
 </body>
 

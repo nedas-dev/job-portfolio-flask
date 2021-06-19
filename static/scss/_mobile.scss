@@ -59,49 +59,6 @@
 
         }
     }
-    
-    
-
-    main#about{
-        
-        div.wrapper{
-            margin: 100px 20px 10px 20px;
-            grid-template-columns: auto;
-            grid-template-rows: auto auto;
-            justify-content: center;
-            grid-gap: 50px;
-            grid-template-areas:
-            "image"
-            "content";
-
-            div.image-container{
-                div.image{
-                    width: 200px;
-                    height: 200px;
-                }
-            }
-
-            div.about-me{
-                h3{
-                    font-size: 1.4rem;
-                }
-                p{
-                    font-size: 1rem;
-                }
-            }
-        }
-
-        fieldset{
-            legend{
-                div.tehno{
-                    h1{
-                        font-size: 0.9rem;
-                    }
-                }
-            }
-        }
-
-    }
 
 }
 
@@ -140,29 +97,6 @@
         }
 
     }
-
-    main#about{
-        margin: 0px 50px;
-        div.wrapper{
-            margin: 100px 20px 10px 20px;
-            grid-template-columns: auto;
-            grid-template-rows: auto auto;
-            justify-content: center;
-            grid-gap: 50px;
-            grid-template-areas:
-            "image"
-            "content";
-
-            div.about-me{
-                h3{
-                    font-size: 1.4rem;
-                }
-                p{
-                    font-size: 1rem;
-                }
-            }
-        }
-    }
 }
 // For Large Devices
 @include Lg-devices{
@@ -176,31 +110,6 @@
             margin-left: 6rem;
         }
     } 
-
-    main#about{
-        font-size: 0.5rem;
-        div.wrapper{
-            margin: 100px 50px 50px 50px;
-            grid-template-columns: auto auto;
-            grid-template-rows: auto;
-            justify-content: center;
-            align-items: center;
-            grid-gap: 20px;
-            grid-template-areas:
-            "image content content";
-
-            .about-me{
-                h3{
-                    font-size: 1.4rem;
-                }
-                p{
-                    font-size: 1rem;
-                }
-            }
-
-        }
-
-    }
 }
 
 // For XLarge Devices

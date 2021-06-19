@@ -44,6 +44,7 @@ body{
 main#home{
     max-width: 1200px;
     margin:auto;
+    padding-bottom: 1rem;
     div.introduction{
         margin-top: 20vh;
         margin-left: 20vh;
@@ -229,24 +230,31 @@ main#contact{
 main#about{
     max-width: 1200px;
     margin: auto;
-    overflow: hidden;
+    padding: 0px 50px;
+    @media screen and (max-width: 500px){
+        padding: 0px 30px;
+    }
+
     div.wrapper{
-        margin: 100px;
-        display: grid;
-        grid-template-columns: 240px 50px 1fr 50px;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "image . content . ";
-        overflow: hidden;
-        grid-gap: 30px;
-        justify-content: center;
+        margin: 100px 0;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        @media screen and (max-width: 1020px){
+            flex-direction: column;
+        }
         div.image-container{
-            grid-area: image;
+            margin-right: 2rem;
+
+            @media screen and (max-width: 1020px){
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+
             div.image{
                 margin:auto;
-                width: 240px;
-                height: 240px;
+                width: 220px;
+                height: 220px;
                 background-image: url("../images/profile2.jpg");
                 background-repeat: no-repeat; 
                 background-size: cover;    
@@ -257,13 +265,13 @@ main#about{
         }
 
         div.about-me{
-            grid-area: content;
             z-index: -1;
             border: 1px solid $third-color;
-            line-height: 1.6rem;
+            line-height: 1.8rem;
             letter-spacing: 0.1rem;
             overflow: hidden;
             border-radius:5px;
+            max-width: 650px;
 
             h3{
                 color: #fff;
@@ -285,7 +293,6 @@ main#about{
                 text-align: justify;
                 text-justify: newspaper;
                 letter-spacing: 0.04rem;
-                line-height: 1.6rem;
             }
         }
 
@@ -349,6 +356,8 @@ main#projects{
             background: rgb(108, 108, 104);
             margin-bottom: 3rem;
             margin: 0rem 1rem 3rem 1rem;
+            display: flex;
+            flex-direction: column;
             img{
                 width:220px;
                 height: 195px;
@@ -356,23 +365,34 @@ main#projects{
             }
 
             div.description{
+                height: 100px;
                 padding: 5px;
                 text-align: center;
-                div.buttons{
-                    padding: 7px;
-                    a{
-                        text-decoration: none;
-                        color: $third-color;
-                        font-size: 2rem;              
-                    }
-
-                    .grey{
-                        color: #fff;
-                        margin-left: 35px;
-                    }
-                }
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-top: 0.5rem;
+                color: rgb(220, 220, 220);
                 p{
-                    font-size: 0.6rem;
+                    font-size: 0.7rem;
+                }
+                h4{
+                    color: white;
+                }
+            }
+
+            div.buttons{
+                padding: 7px;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color: $third-color;
+                    font-size: 2rem;              
+                }
+
+                .grey{
+                    color: #fff;
+                    margin-left: 35px;
                 }
             }
 

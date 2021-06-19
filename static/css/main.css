@@ -71,6 +71,58 @@ header#main-menu div.menu-content ul.nav-list li.nav-item:hover {
   color: #a8dadc;
 }
 
+#mainfooter {
+  background-color: #545454;
+  width: 100%;
+}
+#mainfooter .footer-wrap {
+  max-width: 1400px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  margin: auto;
+}
+#mainfooter .footer-wrap p {
+  font-size: 14px;
+  text-align: center;
+}
+#mainfooter .footer-wrap img {
+  height: 69px;
+}
+#mainfooter .footer-wrap div.social-media a {
+  color: #a8dadc;
+  text-decoration: none;
+  margin-left: 15px;
+}
+#mainfooter .footer-wrap div.social-media a i {
+  font-size: 35px;
+}
+#mainfooter .footer-wrap div.social-media a i:hover {
+  color: #5fbbbf;
+}
+@media screen and (max-width: 400px) {
+  #mainfooter .footer-wrap {
+    flex-direction: column-reverse;
+  }
+  #mainfooter .footer-wrap div.social-media {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  #mainfooter .footer-wrap div.social-media a {
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+#mainfooter.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
 .current {
   color: #a8dadc;
 }
@@ -116,6 +168,7 @@ body.bg-image .layout {
 main#home {
   max-width: 1200px;
   margin: auto;
+  padding-bottom: 1rem;
 }
 main#home div.introduction {
   margin-top: 20vh;
@@ -279,27 +332,38 @@ main#contact div.contact-info:hover {
 main#about {
   max-width: 1200px;
   margin: auto;
-  overflow: hidden;
+  padding: 0px 50px;
+}
+@media screen and (max-width: 500px) {
+  main#about {
+    padding: 0px 30px;
+  }
 }
 main#about div.wrapper {
-  margin: 100px;
-  display: grid;
-  grid-template-columns: 240px 50px 1fr 50px;
-  grid-template-rows: auto;
-  grid-template-areas: "image . content . ";
-  overflow: hidden;
-  grid-gap: 30px;
-  justify-content: center;
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 1020px) {
+  main#about div.wrapper {
+    flex-direction: column;
+  }
+}
 main#about div.wrapper div.image-container {
-  grid-area: image;
+  margin-right: 2rem;
   z-index: -1;
+}
+@media screen and (max-width: 1020px) {
+  main#about div.wrapper div.image-container {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
 }
 main#about div.wrapper div.image-container div.image {
   margin: auto;
-  width: 240px;
-  height: 240px;
+  width: 220px;
+  height: 220px;
   background-image: url("../images/profile2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -307,13 +371,13 @@ main#about div.wrapper div.image-container div.image {
   border: 3px solid #a8dadc;
 }
 main#about div.wrapper div.about-me {
-  grid-area: content;
   z-index: -1;
   border: 1px solid #a8dadc;
-  line-height: 1.6rem;
+  line-height: 1.8rem;
   letter-spacing: 0.1rem;
   overflow: hidden;
   border-radius: 5px;
+  max-width: 650px;
 }
 main#about div.wrapper div.about-me h3 {
   color: #fff;
@@ -335,7 +399,6 @@ main#about div.wrapper div.about-me p {
   text-align: justify;
   text-justify: newspaper;
   letter-spacing: 0.04rem;
-  line-height: 1.6rem;
 }
 main#about fieldset {
   max-width: 900px;
@@ -389,6 +452,8 @@ main#projects div.wrapper div.project-item {
   background: #6c6c68;
   margin-bottom: 3rem;
   margin: 0rem 1rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
 main#projects div.wrapper div.project-item img {
   width: 220px;
@@ -396,23 +461,33 @@ main#projects div.wrapper div.project-item img {
   border-bottom: 3px solid #a8dadc;
 }
 main#projects div.wrapper div.project-item div.description {
+  height: 100px;
   padding: 5px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: gainsboro;
 }
-main#projects div.wrapper div.project-item div.description div.buttons {
+main#projects div.wrapper div.project-item div.description p {
+  font-size: 0.7rem;
+}
+main#projects div.wrapper div.project-item div.description h4 {
+  color: white;
+}
+main#projects div.wrapper div.project-item div.buttons {
   padding: 7px;
+  text-align: center;
 }
-main#projects div.wrapper div.project-item div.description div.buttons a {
+main#projects div.wrapper div.project-item div.buttons a {
   text-decoration: none;
   color: #a8dadc;
   font-size: 2rem;
 }
-main#projects div.wrapper div.project-item div.description div.buttons .grey {
+main#projects div.wrapper div.project-item div.buttons .grey {
   color: #fff;
   margin-left: 35px;
-}
-main#projects div.wrapper div.project-item div.description p {
-  font-size: 0.6rem;
 }
 main#projects div.wrapper div.project-item:hover {
   background: #3b3a3a;
@@ -478,28 +553,6 @@ main#projects div.wrapper div.project-item:hover {
   main#contact div.contact-info a h2 span {
     font-size: 1rem;
   }
-
-  main#about div.wrapper {
-    margin: 100px 20px 10px 20px;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    justify-content: center;
-    grid-gap: 50px;
-    grid-template-areas: "image" "content";
-  }
-  main#about div.wrapper div.image-container div.image {
-    width: 200px;
-    height: 200px;
-  }
-  main#about div.wrapper div.about-me h3 {
-    font-size: 1.4rem;
-  }
-  main#about div.wrapper div.about-me p {
-    font-size: 1rem;
-  }
-  main#about fieldset legend div.tehno h1 {
-    font-size: 0.9rem;
-  }
 }
 @media screen and (min-width: 501px) and (max-width: 768px) {
   main#home div.introduction {
@@ -524,24 +577,6 @@ main#projects div.wrapper div.project-item:hover {
   main#contact div.contact-info i.map-icon {
     font-size: 1.5rem;
   }
-
-  main#about {
-    margin: 0px 50px;
-  }
-  main#about div.wrapper {
-    margin: 100px 20px 10px 20px;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    justify-content: center;
-    grid-gap: 50px;
-    grid-template-areas: "image" "content";
-  }
-  main#about div.wrapper div.about-me h3 {
-    font-size: 1.4rem;
-  }
-  main#about div.wrapper div.about-me p {
-    font-size: 1rem;
-  }
 }
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   main#home div.introduction {
@@ -550,25 +585,6 @@ main#projects div.wrapper div.project-item:hover {
   }
   main#home div.icons {
     margin-left: 6rem;
-  }
-
-  main#about {
-    font-size: 0.5rem;
-  }
-  main#about div.wrapper {
-    margin: 100px 50px 50px 50px;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    justify-content: center;
-    align-items: center;
-    grid-gap: 20px;
-    grid-template-areas: "image content content";
-  }
-  main#about div.wrapper .about-me h3 {
-    font-size: 1.4rem;
-  }
-  main#about div.wrapper .about-me p {
-    font-size: 1rem;
   }
 }
 @media screen and (min-width: 1171px) {

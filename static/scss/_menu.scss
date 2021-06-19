@@ -2,7 +2,6 @@
 @import 'config';
 
 header#main-menu{
-
         div.menu-btn{
             div.nav-hamburger{
                 width: 40px;
@@ -82,6 +81,61 @@ header#main-menu{
             }
         }
     }
+
+#mainfooter{
+    background-color: rgb(84, 84, 84);
+    width: 100%;
+    .footer-wrap{
+        max-width: 1400px;
+        width: 100%;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10%;
+        margin: auto;
+    
+            p{
+                font-size: 14px;
+                text-align: center;
+            }
+            img{
+                height: 69px;
+            }
+            div.social-media{
+                a{
+                    color: $third-color;
+                    text-decoration: none;
+                    margin-left: 15px;
+                    i{
+                        font-size: 35px;
+                        &:hover{
+                            color: darken($third-color, 20);
+                        }
+                    }
+                }
+            }
+    
+        @media screen and (max-width:400px){
+            flex-direction: column-reverse;
+            div.social-media{
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+                a{
+                    margin:0;
+                    padding: 0 10px;
+                }
+            }
+    
+        }
+    }
+    &.fixed{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}
 
 .current{
     color: $third-color;

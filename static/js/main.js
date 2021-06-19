@@ -41,16 +41,31 @@ $(document).ready(function () {
     }
 });
 
-// Changes colors for separate pages in nav menu.
-if ($('div#index').length) {
-    $('li.index').addClass('current')
-}
-else if ($('div#projects').length) {
-    $('li.projects').addClass('current')
-}
-else if ($('div#aboutme').length) {
-    $('li.aboutme').addClass('current')
-}
-else if ($('div#contactme').length) {
-    $('li.contactme').addClass('current')
+document.addEventListener("DOMContentLoaded", function () {
+    const mainFooter = document.getElementById('mainfooter');
+    const footerReact = mainFooter.getBoundingClientRect()
+    const windowHeight = window
+    if (windowHeight.innerHeight > footerReact.y) {
+        mainFooter.className = 'fixed';
+    }
+
+
+    updateFooterPositioning('resize');
+    updateFooterPositioning('click');
+});
+
+function updateFooterPositioning(action) {
+    window.addEventListener(action, function (e) {
+        const mainFooter = document.getElementById('mainfooter');
+        const footerReact = mainFooter.getBoundingClientRect()
+        const mainTagReact = document.querySelector('main').getBoundingClientRect()
+
+        if (footerReact.y + window.pageYOffset > window.innerHeight) {
+            mainFooter.className = '';
+        } else if (mainTagReact.bottom > footerReact.y + window.pageYOffset) {
+            mainFooter.className = '';
+        } else {
+            mainFooter.className = 'fixed';
+        }
+    });
 }
