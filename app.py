@@ -30,6 +30,11 @@ class Visit(db.Model):
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+
+@app.route('/portfolio/')
+def projects():
     try:
         counter = Visit.query.filter_by(id=1).first_or_404()
         counter.count += 1
@@ -37,11 +42,6 @@ def index():
     except:
         pass
 
-    return render_template('index.html')
-
-
-@app.route('/portfolio/')
-def projects():
     return render_template('projects.html')
 
 
@@ -72,6 +72,19 @@ def contact():
 
 @app.route('/visits/')
 def visits():
+    inst = Visit.query.filter_by(id=1).first_or_404()
+    return f'Total visits: {inst.count}'
+
+
+@app.route('/reset/')
+def reset():
+    try:
+        counter = Visit.query.filter_by(id=1).first_or_404()
+        counter.count = 0
+        db.session.commit()
+    except:
+        pass
+
     inst = Visit.query.filter_by(id=1).first_or_404()
     return f'Total visits: {inst.count}'
 
