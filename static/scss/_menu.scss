@@ -1,143 +1,140 @@
 // Main Menu Settings (Hamburger icon included)
 @import 'config';
 
-header#main-menu{
-        div.menu-btn{
-            div.nav-hamburger{
-                width: 40px;
-                height: 30px;
-                position:fixed;
-                right:20px;
-                top:20px;
-                display:flex;
-                flex-direction: column;
-                justify-content: space-around;
-                z-index: 5;
-                div.lines{
-                    width: 80%;
-                    height: 10%;
-                    background: snow;
-                }
+header#main-menu {
+  div.menu-btn {
+    div.nav-hamburger {
+      width: 40px;
+      height: 30px;
+      position: fixed;
+      right: 20px;
+      top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      z-index: 5;
+      div.lines {
+        width: 80%;
+        height: 10%;
+        background: snow;
+      }
 
-                div.line1{
-                    transition: all 0.5s ease;
-                }
+      div.line1 {
+        transition: all 0.5s ease;
+      }
 
-                div.line2{
-                    display: block;
-                }
+      div.line2 {
+        display: block;
+      }
 
-                div.line3{
-                    transition: all 0.5s ease;
-                }
-                
-                &:hover{
-                    cursor: pointer;
-                }
-            }
-        }
+      div.line3 {
+        transition: all 0.5s ease;
+      }
 
-        div.menu-content{
-            display: none;
-            @include transition((opacity 0.7s, visibility 0.7s));
-            position: fixed;
-            left: 50%;
-            top:50%;
-            @include transform(translate(-50%, -50%));
-            max-width: 400px;
-            height: 400px;
-            min-width: 350px;
-            z-index: 3;
-            opacity: 0.85;
-            border: 3px solid $third-color;
-            background: darken($primary-color, 30);
-            border-radius: 10px;
-            font-size: 2rem;
-            font-weight: 500;
-            text-transform: capitalize;
-        
-            ul.nav-list{
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                height: 100%;
-        
-                a{
-                    text-decoration: none;
-                    color: #fff;
-                }
-        
-                li.nav-item{
-                    flex: 1fr;
-                    
-                    &:hover{
-                        color: $third-color;
-                        }
-                }
-                
-
-            }
-        }
+      &:hover {
+        cursor: pointer;
+      }
     }
+  }
 
-#mainfooter{
-    margin-top: 1.5rem;
-    background-color: rgb(84, 84, 84);
-    width: 100%;
-    .footer-wrap{
-        max-width: 1400px;
-        width: 100%;
-        border-radius: 5px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 10%;
-        margin: auto;
-    
-            p{
-                font-size: 14px;
-                text-align: center;
-            }
-            img{
-                height: 69px;
-            }
-            div.social-media{
-                a{
-                    color: $third-color;
-                    text-decoration: none;
-                    margin-left: 15px;
-                    i{
-                        font-size: 35px;
-                        &:hover{
-                            color: darken($third-color, 20);
-                        }
-                    }
-                }
-            }
-    
-        @media screen and (max-width:400px){
-            flex-direction: column-reverse;
-            div.social-media{
-                margin-bottom: 1rem;
-                margin-top: 1rem;
-                a{
-                    margin:0;
-                    padding: 0 10px;
-                }
-            }
-    
+  div.menu-content {
+    display: none;
+    @include transition((opacity 0.7s, visibility 0.7s));
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    @include transform(translate(-50%, -50%));
+    max-width: 400px;
+    height: 400px;
+    min-width: 350px;
+    z-index: 3;
+    opacity: 0.85;
+    border: 3px solid $third-color;
+    background: darken($primary-color, 30);
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+
+    ul.nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      li.nav-item {
+        flex: 1fr;
+
+        &:hover {
+          color: $third-color;
         }
+      }
     }
-    &.fixed{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-    }
+  }
 }
 
-.current{
-    color: $third-color;
+#mainfooter {
+  margin-top: 1.5rem;
+  background-color: rgb(84, 84, 84);
+  width: 100%;
+  .footer-wrap {
+    max-width: 1400px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    margin: auto;
+
+    p {
+      font-size: 14px;
+      text-align: center;
+    }
+    img {
+      height: 69px;
+    }
+    div.social-media {
+      a {
+        color: $third-color;
+        text-decoration: none;
+        margin-left: 15px;
+        i {
+          font-size: 35px;
+          &:hover {
+            color: darken($third-color, 20);
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      flex-direction: column-reverse;
+      div.social-media {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        a {
+          margin: 0;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+  &.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.current {
+  color: $third-color;
 }

@@ -39,6 +39,7 @@ $(document).ready(function () {
     if ($('.error').length) {
         $('#emailForm').css('display', 'block');
     }
+    navLinkAddColor()
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -68,4 +69,22 @@ function updateFooterPositioning(action) {
             mainFooter.className = 'fixed';
         }
     });
+}
+
+function navLinkAddColor(){
+    let pathname = window.location.pathname
+    switch(pathname){
+        case '/':
+            document.querySelector('li.index').classList.add('current')
+            break
+        case '/portfolio/':
+            document.querySelector('li.projects').classList.add('current')
+            break
+        case '/aboutme/':
+            document.querySelector('li.aboutme').classList.add('current')
+            break
+        case '/contact/':
+            document.querySelector('li.contactme').classList.add('current')
+            break
+    }
 }
