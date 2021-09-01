@@ -24,9 +24,8 @@ body {
   color: white;
   &.bg-image {
     background-image: $bg-image;
-    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-attachment: fixed;
     .layout {
       position: absolute;
       top: 0;

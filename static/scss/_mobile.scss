@@ -1,124 +1,122 @@
 // For Small Devices
-@include Sm-devices{
-    main#home{
+@include Sm-devices {
+  //   body.bg-image.projects-bg {
+  //     background-image: url(../images/idk-min.jpeg);
+  //     background-size: contain;
+  //     background-repeat: repeat;
+  //   }
 
-        div.introduction{
-            margin-left: 5vh;
-            margin-top: 25vh;
-            h1{
-                font-size: 2.4rem;
-                padding-bottom: 1.8rem;
-            }
-            h2{
-                font-size:1.3rem;
-            }
-        }
-        div.icons{
-            margin-left: 3rem;
-            i{
-                font-size: 2.3rem;
-            }
-        }
-    } 
-    header#main-menu{
-        div.menu-btn{
-            div.menu-content{
-                font-size: 1.5rem;
-            }
-        }
+  main#home {
+    div.introduction {
+      margin-left: 5vh;
+      margin-top: 25vh;
+      h1 {
+        font-size: 2.4rem;
+        padding-bottom: 1.8rem;
+      }
+      h2 {
+        font-size: 1.3rem;
+      }
     }
-
-    main#contact{
-        width:95%;
-        margin:auto;
-        div.contact-info{
-            font-size: 0.7rem;
-            i.map-icon{
-                font-size: 1rem;
-            }
-
-            &.extra{
-                margin-top: 100px;
-                margin-bottom: 30px;
-            }
-
-            div.text{
-                h2{
-                    font-size: 1rem;
-                }
-            }
-
-            a{
-                h2{
-                    font-size: 1rem;
-                    span{
-                        font-size: 1rem;
-                    }
-                }
-            }
-
-        }
+    div.icons {
+      margin-left: 3rem;
+      i {
+        font-size: 2.3rem;
+      }
     }
+  }
+  header#main-menu {
+    div.menu-btn {
+      div.menu-content {
+        font-size: 1.5rem;
+      }
+    }
+  }
 
+  main#contact {
+    width: 95%;
+    margin: auto;
+    div.contact-info {
+      font-size: 0.7rem;
+      i.map-icon {
+        font-size: 1rem;
+      }
+
+      &.extra {
+        margin-top: 100px;
+        margin-bottom: 30px;
+      }
+
+      div.text {
+        h2 {
+          font-size: 1rem;
+        }
+      }
+
+      a {
+        h2 {
+          font-size: 1rem;
+          span {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 // For Medium Devices
-@include Md-devices{
-    main#home{
-
-        div.introduction{
-            margin-left: 5vh;
-            margin-top: 25vh;
-            h1{
-                font-size: 3rem;
-                padding-bottom: 2rem;
-            }
-            h2{
-                font-size:2rem;
-            }
-        }
-                div.icons{
-            margin-left: 3rem;
-        }
+@include Md-devices {
+  main#home {
+    div.introduction {
+      margin-left: 5vh;
+      margin-top: 25vh;
+      h1 {
+        font-size: 3rem;
+        padding-bottom: 2rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
     }
-    header#main-menu{
-        div.menu-btn{
-            div.menu-content{
-                font-size: 1.5rem;
-            }
-        }
-    } 
-    main#contact{
-        div.contact-info{
-
-            i.map-icon{
-                font-size: 1.5rem;
-            }
-        }
-
+    div.icons {
+      margin-left: 3rem;
     }
+  }
+  header#main-menu {
+    div.menu-btn {
+      div.menu-content {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  main#contact {
+    div.contact-info {
+      i.map-icon {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 // For Large Devices
-@include Lg-devices{
-
-    main#home{
-        div.introduction{
-            margin-left: 10vh;
-            margin-top: 30vh;
-        }
-        div.icons{
-            margin-left: 6rem;
-        }
-    } 
+@include Lg-devices {
+  main#home {
+    div.introduction {
+      margin-left: 10vh;
+      margin-top: 30vh;
+    }
+    div.icons {
+      margin-left: 6rem;
+    }
+  }
 }
 
 // For XLarge Devices
-@include Xl-devices{
-    main#home{
-        div.introduction{
-            margin-left: 20vh;
-            margin-top: 30vh;
-        }
-     
+@include Xl-devices {
+  main#home {
+    div.introduction {
+      margin-left: 20vh;
+      margin-top: 30vh;
     }
+  }
 }

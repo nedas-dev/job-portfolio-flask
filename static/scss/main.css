@@ -152,8 +152,8 @@ body div.blur {
 }
 body.bg-image {
   background-image: url("../images/bg5.jpg");
-  background-size: cover;
   background-attachment: fixed;
+  background-size: cover;
 }
 body.bg-image .layout {
   position: absolute;

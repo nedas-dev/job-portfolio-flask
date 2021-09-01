@@ -90,4 +90,5 @@ def reset():
 
 
 if __name__ == '__main__':
+    # in terminal say "flask run --host=0.0.0.0" if you want to run it on the network and not localhost (be available for the whole network)
     app.run(debug=True)
