@@ -154,6 +154,7 @@ body.bg-image {
   background-image: url("../images/bg5.jpg");
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
 }
 body.bg-image .layout {
   position: absolute;
