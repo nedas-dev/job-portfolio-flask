@@ -38,6 +38,8 @@ header#main-menu {
   }
 
   div.menu-content {
+    user-select: none;
+    -webkit-user-select: none;
     display: none;
     @include transition((opacity 0.7s, visibility 0.7s));
     position: fixed;

@@ -27,6 +27,8 @@ header#main-menu div.menu-btn div.nav-hamburger:hover {
   cursor: pointer;
 }
 header#main-menu div.menu-content {
+  user-select: none;
+  -webkit-user-select: none;
   display: none;
   transition: opacity 0.7s, visibility 0.7s;
   -moz-transition: opacity 0.7s, visibility 0.7s;
