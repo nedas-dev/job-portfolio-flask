@@ -444,6 +444,7 @@ main#about div.random {
 main#projects {
   margin: 100px auto;
   max-width: 1400px;
+  position: relative;
 }
 main#projects div.video-player {
   display: none;
@@ -469,6 +470,8 @@ main#projects div.video-player img {
   width: 25px;
   height: 25px;
   transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
 }
 main#projects div.video-player video {
   width: 100%;

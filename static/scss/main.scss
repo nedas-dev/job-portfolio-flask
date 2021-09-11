@@ -339,7 +339,7 @@ main#about {
 main#projects {
   margin: 100px auto;
   max-width: 1400px;
-
+  position: relative;
   div.video-player {
     display: none;
     position: fixed;
@@ -364,8 +364,8 @@ main#projects {
       width: 25px;
       height: 25px;
       transform: translate(-50%, 50%);
-      // -ms-transform: translate(-50%, -50%);
-      // -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, 50%);
+      -webkit-transform: translate(-50%, 50%);
     }
     video {
       width: 100%;
