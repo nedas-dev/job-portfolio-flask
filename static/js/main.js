@@ -91,6 +91,12 @@ function navLinkAddColor(){
             break
         case '/portfolio/':
             document.querySelector('li.projects').classList.add('current')
+            document.getElementById('path-video-link').addEventListener('click', e => {
+                document.querySelector('div.video-player').style.display = 'block'
+                document.querySelector('img.close').addEventListener('click', e => {
+                    document.querySelector('div.video-player').style.display = 'none'
+                }, {once: true})
+            })
             break
         case '/aboutme/':
             document.querySelector('li.aboutme').classList.add('current')

@@ -6,6 +6,13 @@
 
 {% block content %}
     <main id="projects">
+        <div class="video-player">
+            <img class="close" src="{{ url_for('static', filename='images/icons/close.svg')}}" alt="close">
+
+            <video controls>
+                <source src="{{ url_for('static', filename='images/videos/path-intro.mp4')}}">
+            </video>
+        </div>
         <div style="display: none" id="projects"></div>
         <div class="wrapper">
             <div class="project-item gold">
@@ -23,6 +30,7 @@
                 </div>
                 <hr>
                 <br>
+                <p class="date"><a id="path-video-link" href="#" style="font-size:16px; color: white;">Play Preview</a></p>
                 <p class="date">Date added: <i>Aug 27, 2021</i></p>
             </div>
             <div class="project-item gold">

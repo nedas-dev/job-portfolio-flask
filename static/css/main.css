@@ -445,6 +445,35 @@ main#projects {
   margin: 100px auto;
   max-width: 1400px;
 }
+main#projects div.video-player {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 720px;
+  z-index: 4;
+  background-color: rgba(109, 109, 109, 0.822);
+  padding: 3.5rem 2rem 3rem 2rem;
+  border: 5px solid #a8dadc;
+  border-radius: 5px;
+}
+main#projects div.video-player img {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, 50%);
+}
+main#projects div.video-player video {
+  width: 100%;
+  border-radius: 5px;
+}
 main#projects div.wrapper {
   margin: 0px 50px;
   display: flex;
@@ -463,6 +492,11 @@ main#projects div.wrapper div.project-item {
   transition: transform 0.5s;
 }
 main#projects div.wrapper div.project-item img {
+  width: 200px;
+  height: 185px;
+  border-bottom: 3px solid #a8dadc;
+}
+main#projects div.wrapper div.project-item video {
   width: 200px;
   height: 185px;
   border-bottom: 3px solid #a8dadc;
@@ -545,6 +579,10 @@ main#projects div.wrapper div.project-item p.date {
     font-size: 1.5rem;
   }
 
+  main#projects div.video-player {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
   main#contact {
     width: 95%;
     margin: auto;
@@ -587,6 +625,10 @@ main#projects div.wrapper div.project-item p.date {
 
   header#main-menu div.menu-btn div.menu-content {
     font-size: 1.5rem;
+  }
+
+  main#projects div.video-player {
+    padding: 3rem 1rem 1rem 1rem;
   }
 
   main#contact div.contact-info i.map-icon {
