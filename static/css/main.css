@@ -137,7 +137,7 @@ header#main-menu div.menu-content ul.nav-list li.nav-item:hover {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Avenir, Arial, sans-serif;
   height: 100%;
   color: white;
 }
@@ -383,6 +383,8 @@ main#about div.wrapper div.about-me {
   overflow: hidden;
   border-radius: 5px;
   max-width: 650px;
+  width: 90%;
+  background-color: #555353;
 }
 main#about div.wrapper div.about-me h3 {
   color: #fff;
@@ -398,7 +400,6 @@ main#about div.wrapper div.about-me p {
   padding: 20px 10px 20px 10px;
   margin: 0px 10px 20px 10px;
   font-size: 1.2rem;
-  background: #3b3a3a;
   opacity: 0.76;
   border-radius: 10px;
   text-align: justify;
@@ -406,11 +407,13 @@ main#about div.wrapper div.about-me p {
   letter-spacing: 0.04rem;
 }
 main#about fieldset {
-  max-width: 900px;
+  max-width: 650px;
   margin: 20px auto;
   padding: 30px 15px;
   width: 90%;
   background-color: #555353;
+  border-radius: 5px;
+  border: 1px solid #a8dadc;
 }
 main#about fieldset div.icons {
   display: flex;
@@ -428,6 +431,8 @@ main#about fieldset legend {
 }
 main#about fieldset div.tehno {
   border: 1px solid #fff;
+  border-radius: 5px;
+  border: 1px solid #a8dadc;
   padding: 3px 10px;
 }
 main#about fieldset div.tehno h1,
@@ -582,6 +587,16 @@ main#projects div.wrapper div.project-item p.date {
     font-size: 1.5rem;
   }
 
+  main#about div.wrapper div.about-me {
+    width: 99%;
+  }
+  main#about div.wrapper div.about-me p {
+    font-size: 16px;
+  }
+  main#about fieldset {
+    width: 99%;
+  }
+
   main#projects div.video-player {
     padding: 3rem 1rem 1rem 1rem;
   }
@@ -628,6 +643,16 @@ main#projects div.wrapper div.project-item p.date {
 
   header#main-menu div.menu-btn div.menu-content {
     font-size: 1.5rem;
+  }
+
+  main#about div.wrapper div.about-me {
+    width: 99%;
+  }
+  main#about div.wrapper div.about-me p {
+    font-size: 16px;
+  }
+  main#about fieldset {
+    width: 99%;
   }
 
   main#projects div.video-player {

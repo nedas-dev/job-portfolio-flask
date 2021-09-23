@@ -33,6 +33,21 @@
     }
   }
 
+  main#about {
+    div.wrapper {
+      div.about-me {
+        width: 99%;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+
+    fieldset {
+      width: 99%;
+    }
+  }
+
   main#projects {
     div.video-player {
       padding: 3rem 1rem 1rem 1rem;
@@ -94,6 +109,21 @@
       div.menu-content {
         font-size: 1.5rem;
       }
+    }
+  }
+
+  main#about {
+    div.wrapper {
+      div.about-me {
+        width: 99%;
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+
+    fieldset {
+      width: 99%;
     }
   }
 

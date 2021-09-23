@@ -19,7 +19,8 @@ body {
     opacity: 40%;
     display: none;
   }
-  font-family: Arial, Helvetica, sans-serif;
+  // font-family: Arial, Helvetica, sans-serif;
+  font-family: Avenir, Arial, sans-serif;
   height: 100%;
   color: white;
   &.bg-image {
@@ -269,7 +270,8 @@ main#about {
       overflow: hidden;
       border-radius: 5px;
       max-width: 650px;
-
+      width: 90%;
+      background-color: lighten($primary-color, 10);
       h3 {
         color: #fff;
         font-size: 1.4rem;
@@ -284,7 +286,7 @@ main#about {
         padding: 20px 10px 20px 10px;
         margin: 0px 10px 20px 10px;
         font-size: 1.2rem;
-        background: $primary-color;
+        // background: $primary-color;
         opacity: 0.76;
         border-radius: 10px;
         text-align: justify;
@@ -295,12 +297,13 @@ main#about {
   }
 
   fieldset {
-    max-width: 900px;
+    max-width: 650px;
     margin: 20px auto;
     padding: 30px 15px;
     width: 90%;
     background-color: lighten($primary-color, 10);
-
+    border-radius: 5px;
+    border: 1px solid $third-color;
     div.icons {
       display: flex;
       flex-wrap: wrap;
@@ -319,6 +322,8 @@ main#about {
 
     div.tehno {
       border: 1px solid #fff;
+      border-radius: 5px;
+      border: 1px solid $third-color;
       padding: 3px 10px;
       h1,
       h2 {
